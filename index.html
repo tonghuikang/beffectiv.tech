@@ -1,52 +1,477 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<!-- Curious chap, aren't you? 👀 -->
+<html lang="en-US">
   <head>
-    <title>Basic Agent Model</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+    />
+    <meta name="description" content="Home of OpenSUTD" />
+    <meta content="Home of OpenSUTD" />
+    <meta content="OpenSUTD" property="og:title" />
+    <meta content="Home of OpenSUTD" property="twitter:title" />
 
-    <!-- d3 is for data visualization -->
-    <script type="text/javascript" src="lib/d3.min.js"></script>
-
-    <!-- custom styles for this application -->
-    <link rel="stylesheet" href="styles/basicagentmodel.css" media="screen" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <title>OpenSUTD - People Page</title>
+    <meta name="description" content="This is our story." />
+    <!-- <link rel="stylesheet" href="assets/css/bulma.min.css" integrity="sha256-vK3UTo/8wHbaUn+dTQD0X6dzidqc5l7gczvH+Bnowwk=" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" href="assets/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome-animation.min.css" />
+    <script
+      src="assets/js/2828f7885a.js"
+      integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+    <script src="assets/js/gitgraph.js"></script>
   </head>
-  <!-- Set class to official for more formal font; unofficial for informal font -->
-  <body class="official bgColor0">
-    <!-- The surface is the main playing field for the game -->
-    <svg
-      id="surface"
-      style="width:100%; height:100%"
-      xmlns="http://www.w3.org/2000/svg"
-      version="1.1"
-      onclick="toggleSimStep();"
-    ></svg>
+  <body
+    data-aos-easing="ease-out"
+    data-aos-duration="800"
+    data-aos-delay="0"
+    style="cursor: default;"
+  >
+    <!-- Scroll Up Button -->
+    <form action="#top">
+      <button id="toTop" title="Go to top" style="display: block;">
+        <i class="fas fa-angle-up"></i>
+      </button>
+    </form>
 
-    <div id="title" style="position:absolute;bottom:0;left:0">
-      Basic Agent-Based Model
+    <!-- Header -->
+    <div class="header-wrapper" id="top">
+      <section class="hero is-large">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <h1 class="subtitle">What is</h1>
+            <h2 class="title">Beffectiv</h2>
+            <h1 class="description">This is our story.</h1>
+          </div>
+        </div>
+      </section>
     </div>
 
-    <div id="window" style="position:absolute;bottom:0;left:35%">
-      Animation Speed:
-      <input
-        id="slider1"
-        type="range"
-        min="0"
-        value="250"
-        max="500"
-        step="10"
-        onchange="redrawWindow();"
-      />
+    <!-- Main Content -->
+    <div class="hero-head">
+      <nav class="navbar is-fixed-top">
+        <div class="container">
+          <div class="navbar-brand is-centered">
+            <span class="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end" style="margin: auto">
+              <div class="tabs is-centered">
+                <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#events">Events</a></li>
+                  <li><a href="#calendar">Calendar</a></li>
+                  <li><a href="#resources">Resources</a></li>
+                  <li><a href="#team">Team</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="main-content">
+      <a class="anchor" id="home"></a>
+      <div class="section-light profile" id="profile">
+        <div class="container">
+          <div class="columns is-multiline">
+            <div
+              class="column is-full has-vertically-aligned-content aos-init aos-animate"
+              data-aos="fade-right"
+            >
+              <p>
+                “We want to achieve something in life. The greatest obstacle is
+                yourself.” ~ anon
+              </p>
+              <br />
+              <p>
+                <strong
+                  >Beffective helps you become effective. We help you become
+                  effective, with absolute productivity.</strong
+                >
+              </p>
+            </div>
+            <div
+              class="column is-full has-text-centered right-image aos-init aos-animate"
+              data-aos="fade-left"
+            >
+              <img
+                class="is-rounded"
+                src="https://i.imgur.com/ZN5qDMU.jpg"
+                alt=""
+                width="250em"
+              />
+            </div>
+            <div id="git_graph" class="column is-full"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section-light profile" id="profile">
+        <a class="anchor" id="team"></a>
+        <div class="container">
+          <div class="column is-12 about-me">
+            <h1 class="title has-text-centered section-title">Team</h1>
+          </div>
+          <div class="columns is-multiline">
+            <div
+              class="column is-4 has-text-centered aos-init"
+              data-aos="fade-left"
+            >
+              <h1 class="title has-text-centered name-title">Wu Shanshan</h1>
+              <p class="seperator-text">CEO</p>
+              <p>
+                CEO
+              </p>
+              <br />
+              <div style="text-align: center"></div>
+            </div>
+
+            <div
+              class="column is-4 has-text-centered aos-init"
+              data-aos="fade-left"
+            >
+              <h1 class="title has-text-centered name-title">Wu Yu</h1>
+              <p class="seperator-text">COO</p>
+              <p>
+                COO
+              </p>
+              <br />
+              <div style="text-align: center"></div>
+            </div>
+
+            <div
+              class="column is-4 has-text-centered aos-init"
+              data-aos="fade-left"
+            >
+              <h1 class="title has-text-centered name-title">Zack</h1>
+              <p class="seperator-text">CPO</p>
+              <p>
+                CPO
+              </p>
+              <br />
+              <div style="text-align: center"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-light profile" id="profile">
+        <a class="anchor" id="team"></a>
+        <div class="container">
+          <!-- <div class="column is-12 about-me">
+                        <h1 class="title has-text-centered section-title">Team</h1>
+                    </div> -->
+          <div class="columns is-multiline">
+            <div
+              class="column is-4 has-text-centered aos-init"
+              data-aos="fade-right"
+            >
+              <h1 class="title has-text-centered name-title">Tong Hui Kang</h1>
+              <p class="seperator-text">CTO</p>
+              <p>
+                CTO
+              </p>
+              <br />
+              <div style="text-align: center"></div>
+            </div>
+
+            <div
+              class="column is-4 has-text-centered aos-init"
+              data-aos="fade-right"
+            >
+              <h1 class="title has-text-centered name-title">James</h1>
+              <p class="seperator-text">CMO</p>
+              <p>
+                CMO
+              </p>
+              <br />
+              <div style="text-align: center"></div>
+            </div>
+
+            <div
+              class="column is-4 has-text-centered aos-init"
+              data-aos="fade-right"
+            >
+              <h1 class="title has-text-centered name-title">Juho</h1>
+              <p class="seperator-text">CFO</p>
+              <p>
+                CFO
+              </p>
+              <br />
+              <div style="text-align: center"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <a
-      id="credits"
-      href="http://www.icons-land.com"
-      style="position:absolute;bottom:0;right:0"
-      >Icons by icons-land.com</a
-    >
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <p>
+            <a
+              class="icon"
+              href="https://github.com/jamestiotio/OpenSUTD-People-Page"
+            >
+              <i class="fab fa-github fa-lg"></i>
+            </a>
+          </p>
+          <div class="control level-item">
+            <a href="https://github.com/dansup/bulma-templates">
+              <div class="tags has-addons">
+                <span class="tag is-dark">Bulma Templates</span>
+                <span class="tag is-info">MIT License</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <noscript>
+      <style type="text/css">
+        .main-content {
+          display: none;
+        }
+      </style>
+      <div class="section-light profile" id="profile">
+        <div class="container">
+          <div class="column is-12 about-me">
+            <h1 class="title has-text-centered section-title">
+              ...And you won't know our story since JavaScript is disabled for
+              you. A fascinating chap, aren't you? Trust me, you wouldn't want
+              to miss out on all the fun. 😉
+            </h1>
+            <h1 class="title has-text-right section-title">
+              - <a href="https://github.com/jamestiotio">@jamestiotio</a>
+            </h1>
+          </div>
+          <br />
+          <br />
+        </div>
+      </div>
+    </noscript>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <link href="assets/css/aos.css" rel="stylesheet" />
+    <script src="assets/js/aos.js"></script>
+    <script>
+      AOS.init({
+        easing: "ease-out",
+        duration: 800
+      });
+    </script>
+    <style>
+      @media screen and (max-width: 600px) {
+        #git_graph {
+          visibility: hidden;
+          clear: both;
+          float: left;
+          margin: 10px auto 5px 20px;
+          width: 28%;
+          display: none;
+        }
+      }
+    </style>
+    <script>
+      let width =
+        window.innerWidth ||
+        document.documentElement.clientWidth ||
+        document.body.clientWidth;
+      let mode = "extended";
+      const gitgraphID = "graph-container-main";
 
-    <!-- Anything below this line should be a popup window or dialog or a late-loading library -->
+      if (width <= 660) {
+        mode = "compact";
+      }
 
-    <script type="text/javascript" src="lib/BasicAgentModel.js"></script>
+      async function createGitgraph() {
+        try {
+          var graphContainer = document.getElementById(gitgraphID);
+          var customTemplate = GitgraphJS.templateExtend(
+            GitgraphJS.TemplateName.Metro,
+            {
+              colors: [
+                "#000000",
+                "#CF0000",
+                "#6963FF",
+                "#47E8D4",
+                "#6BDB52",
+                "#E84BA5",
+                "#FFA657"
+              ],
+              commit: {
+                message: {
+                  displayAuthor: false,
+                  displayHash: false
+                }
+              }
+            }
+          );
+          var gitgraph = GitgraphJS.createGitgraph(graphContainer, {
+            template: customTemplate,
+            mode: mode,
+            orientation: "vertical-reverse"
+          });
+          var OpenSUTD = gitgraph.branch("Resources");
+          OpenSUTD.commit({
+            subject: "Joel's prototype",
+            onClick(commit) {
+              window.open("https://github.com/OpenSUTD/course-materials");
+            },
+            onMouseOver(commit) {
+              document.body.style.cursor = "pointer";
+            },
+            onMouseOut(commit) {
+              document.body.style.cursor = "default";
+            }
+          });
+
+          OpenSUTD.commit({
+            subject: "Academic notes",
+            onClick(commit) {
+              window.open("https://github.com/OpenSUTD/course-notes");
+            },
+            onMouseOver(commit) {
+              document.body.style.cursor = "pointer";
+            },
+            onMouseOut(commit) {
+              document.body.style.cursor = "default";
+            }
+          });
+          OpenSUTD.commit({
+            subject: "Open SAC Policies",
+            onClick(commit) {
+              window.open("https://github.com/OpenSUTD/SAC-student-rules");
+            },
+            onMouseOver(commit) {
+              document.body.style.cursor = "pointer";
+            },
+            onMouseOut(commit) {
+              document.body.style.cursor = "default";
+            }
+          });
+          OpenSUTD.commit({
+            subject: "Fifth Row guides",
+            onClick(commit) {
+              window.open("https://github.com/OpenSUTD/fifth-row-guides");
+            },
+            onMouseOver(commit) {
+              document.body.style.cursor = "pointer";
+            },
+            onMouseOut(commit) {
+              document.body.style.cursor = "default";
+            }
+          });
+          var Web_Artefacts = gitgraph.branch({
+            name: "Web Artefacts",
+            from: OpenSUTD
+          });
+          var Events = gitgraph.branch({
+            name: "Events",
+            from: OpenSUTD
+          });
+          OpenSUTD.commit({
+            subject: "Publish coding notes",
+            onClick(commit) {
+              window.open("https://github.com/OpenSUTD/coding-notes");
+            },
+            onMouseOver(commit) {
+              document.body.style.cursor = "pointer";
+            },
+            onMouseOut(commit) {
+              document.body.style.cursor = "default";
+            }
+          });
+          Events.commit({
+            subject: "DiscoverSUTD 2019",
+            onClick(commit) {
+              window.open("https://discover.sutd.dev/");
+            },
+            onMouseOver(commit) {
+              document.body.style.cursor = "pointer";
+            },
+            onMouseOut(commit) {
+              document.body.style.cursor = "default";
+            }
+          });
+          Events.commit({
+            subject: "SUTD Unfiltered 2019",
+            onClick(commit) {
+              window.open("https://unfiltered.opensutd.org/");
+            },
+            onMouseOver(commit) {
+              document.body.style.cursor = "pointer";
+            },
+            onMouseOut(commit) {
+              document.body.style.cursor = "default";
+            }
+          });
+          Web_Artefacts.commit("SUTD Calendar");
+          OpenSUTD.merge(Events);
+          Web_Artefacts.commit("People Page");
+          OpenSUTD.merge(Web_Artefacts);
+          graphContainer.style.transform =
+            "scale(0.85, 0.85) translate(20%, 0%)";
+        } catch (e) {
+          console.log(e);
+        }
+      }
+
+      async function deleteGitgraph() {
+        try {
+          oldGitgraph = document.getElementById(gitgraphID);
+          while (oldGitgraph.firstChild) {
+            oldGitgraph.removeChild(oldGitgraph.firstChild);
+          }
+        } catch (e) {
+          console.log(e);
+        }
+      }
+
+      async function checkForResize() {
+        try {
+          console.log("checkForResize triggered");
+          let newMode = "extended";
+          width =
+            window.innerWidth ||
+            document.documentElement.clientWidth ||
+            document.body.clientWidth;
+
+          if (width <= 660) {
+            newMode = "compact";
+          }
+
+          console.log(`width: ${width}; mode: ${mode}; newMode: ${newMode}`);
+
+          if (newMode !== mode) {
+            if (newMode === "compact") {
+              mode = "compact";
+            } else {
+              mode = "extended";
+            }
+            deleteGitgraph();
+            createGitgraph();
+          }
+        } catch (e) {
+          console.log(e);
+        }
+      }
+
+      createGitgraph();
+      window.onresize = checkForResize;
+    </script>
   </body>
 </html>
