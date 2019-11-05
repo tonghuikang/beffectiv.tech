@@ -172,7 +172,7 @@ html {
     height: 120px;
     line-height: 25px;
     text-align: center;
-    background: #9b1c31;
+    background: #f5f0f0;
     color: whitesmoke;
     padding-top: 2rem;
 }
@@ -255,13 +255,13 @@ footer li:before {
     animation: flash linear 1s infinite;
 }
 @-webkit-keyframes flash {
-    0% { opacity: 1; } 
-    50% { opacity: .1; } 
+    0% { opacity: 1; }
+    50% { opacity: .1; }
     100% { opacity: 1; }
 }
 @keyframes flash {
-    0% { opacity: 1; } 
-    50% { opacity: .1; } 
+    0% { opacity: 1; }
+    50% { opacity: .1; }
     100% { opacity: 1; }
 }
 a.anchor {
