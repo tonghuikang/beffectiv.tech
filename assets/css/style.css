@@ -236,7 +236,7 @@ html {
     z-index: 700;
     border: none;
     outline: none;
-    background-color: rgba(111, 149, 255, 0.65);
+    background-color: rgba(59, 89, 152, 1);
     color: white;
     cursor: pointer;
     border-radius: 50%;
@@ -262,7 +262,7 @@ html {
     z-index: 700;
     border: none;
     outline: none;
-    background-color: rgba(20, 128, 155, 0.65);
+    background-color: rgba(193, 53, 132, 1);
     color: white;
     cursor: pointer;
     border-radius: 50%;
@@ -277,6 +277,34 @@ html {
 #toIG:hover {
     background-color: #020f25;
 }
+
+
+#toLI {
+    height: 50px;
+    width: 50px;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 170px;
+    z-index: 700;
+    border: none;
+    outline: none;
+    background-color: rgba(40, 103, 178, 1);
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 2rem;
+    box-shadow: 0 5px 20px rgba(11, 5, 63, 0.158);
+}
+
+#toLI a {
+    color: white;
+}
+
+#toLI:hover {
+    background-color: #020f25;
+}
+
 
 
 ::-webkit-scrollbar {
