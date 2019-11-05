@@ -5,6 +5,7 @@
     justify-content: center;
 }
 
+
 * {
     box-sizing: border-box;
 }
@@ -103,7 +104,7 @@ html {
 .main-content .section-light.profile .right-image img {
     border-radius: 11px;
     margin: 20px;
-   <!-- box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3); -->
+   /* box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3); */
 }
 
 @media (max-width: 599px) {
@@ -224,6 +225,59 @@ html {
 #toTop:hover {
     background-color: #5c4343;
 }
+
+#toFB {
+    height: 50px;
+    width: 50px;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 900px;
+    z-index: 700;
+    border: none;
+    outline: none;
+    background-color: rgba(111, 149, 255, 0.65);
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 2rem;
+    box-shadow: 0 5px 20px rgba(11, 5, 63, 0.158);
+}
+
+#toFB a {
+    color: white;
+}
+
+#toFB:hover {
+    background-color: #020f25;
+}
+
+#toIG{
+    height: 50px;
+    width: 50px;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 1000px;
+    z-index: 700;
+    border: none;
+    outline: none;
+    background-color: rgba(20, 128, 155, 0.65);
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 2rem;
+    box-shadow: 0 5px 20px rgba(11, 5, 63, 0.158);
+}
+
+#toIG a {
+    color: white;
+}
+
+#toIG:hover {
+    background-color: #020f25;
+}
+
 
 ::-webkit-scrollbar {
     width: 8px;
