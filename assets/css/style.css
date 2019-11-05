@@ -104,7 +104,7 @@ html {
 .main-content .section-light.profile .right-image img {
     border-radius: 11px;
     margin: 20px;
-    box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3);
+   <!-- box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3); -->
 }
 
 @media (max-width: 599px) {
@@ -173,7 +173,7 @@ html {
     height: 120px;
     line-height: 25px;
     text-align: center;
-    background: #9b1c31;
+    background: #f5f0f0;
     color: whitesmoke;
     padding-top: 2rem;
 }
@@ -309,13 +309,13 @@ footer li:before {
     animation: flash linear 1s infinite;
 }
 @-webkit-keyframes flash {
-    0% { opacity: 1; } 
-    50% { opacity: .1; } 
+    0% { opacity: 1; }
+    50% { opacity: .1; }
     100% { opacity: 1; }
 }
 @keyframes flash {
-    0% { opacity: 1; } 
-    50% { opacity: .1; } 
+    0% { opacity: 1; }
+    50% { opacity: .1; }
     100% { opacity: 1; }
 }
 a.anchor {
