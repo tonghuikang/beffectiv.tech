@@ -93,7 +93,7 @@ Team
                   <li><a href="index.html#problem">Problem</a></li>
                   <li><a href="index.html#execution">Execution Plan</a></li>
                   <li><a href="product.html">Product</a></li>
-                  <li><a href="#team">Team</a></li>
+                  <li><a href="#team">Team and Contact</a></li>
                 </ul>
               </div>
             </div>
@@ -242,10 +242,10 @@ Team
     </div>
 
     <div class="section-dark profile" id="profile">
-        <a class="anchor" id="execution"></a>
+        <a class="anchor" id="contact"></a>
         <div class="container">
           <div class="column is-12 about-me">
-            <h1 class="title has-text-centered section-title">Execution Plan</h1>
+            <h1 class="title has-text-centered section-title">Contact us</h1>
           </div>
           <div class="columns is-centered">
             <div
@@ -253,7 +253,7 @@ Team
               data-aos="fade-left"
             >
             <div id="after_submit"></div>
-            <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+            <!--<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
               <div class="row">
                 <label class="required" for="name">Your name:</label><br />
                 <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
@@ -267,7 +267,61 @@ Team
               <div class="row">
                 <label class="required" for="message">Your message:</label><br />
                 <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
-                <span id="message_validation" class="error_message"></span>
+                <span id="message_validation" class="error_message"></span> -->
+                <form name="htmlform" method="post" action="html_form_send.php">
+                    <table width="450px">
+                    </tr>
+                    <tr>
+                     <td valign="top">
+                      <label for="first_name">First Name *</label>
+                     </td>
+                     <td valign="top">
+                      <input  type="text" name="first_name" maxlength="50" size="30">
+                     </td>
+                    </tr>
+                     
+                    <tr>
+                     <td valign="top"">
+                      <label for="last_name">Last Name *</label>
+                     </td>
+                     <td valign="top">
+                      <input  type="text" name="last_name" maxlength="50" size="30">
+                     </td>
+                    </tr>
+                    <tr>
+                     <td valign="top">
+                      <label for="email">Email Address *</label>
+                     </td>
+                     <td valign="top">
+                      <input  type="text" name="email" maxlength="80" size="30">
+                     </td>
+                     
+                    </tr>
+                    <tr>
+                     <td valign="top">
+                      <label for="telephone">Telephone Number</label>
+                     </td>
+                     <td valign="top">
+                      <input  type="text" name="telephone" maxlength="30" size="30">
+                     </td>
+                    </tr>
+                    <tr>
+                     <td valign="top">
+                      <label for="comments">Comments *</label>
+                     </td>
+                     <td valign="top">
+                      <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+                     </td>
+                     
+                    </tr>
+                    <tr>
+                     <td colspan="2" style="text-align:center">
+                      <input type="submit" value="Submit">   
+                     </td>
+                    </tr>
+                    </table>
+                    </form>
+              
               </div>
               <br />
               <div style="text-align: center"></div>
@@ -278,8 +332,7 @@ Team
 
 
         
-        <input id="submit_button" type="submit" value="Send email" />
-    </form>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
