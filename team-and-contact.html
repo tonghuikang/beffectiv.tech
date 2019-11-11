@@ -252,6 +252,7 @@ Team
               class="column is-4 has-text-centered aos-init"
               data-aos="fade-left"
             >
+            <!--
             <div id="after_submit"></div>
 
                 <form name="htmlform" method="post" action="html_form_send.php">
@@ -298,18 +299,30 @@ Team
                      </td>
                     </tr>
                     </table>
-                    </form>
-                    <br />
-                    <br />
-                    <br />
+                    </form> 
+                  -->
 
+                   <!--
+                    <br />
+                    <p>Enquires about our products?</p>
+                    <br />
+                    <p>Interested on investing?</p>
+                    <br />
+                   -->
+
+                    <!--
                     <form action="mail.php" method="POST">
                       <p>Name</p> <input type="text" name="name">
                       <p>Email</p> <input type="text" name="email">
                       <p>Message</p><textarea name="message" rows="6" cols="25"></textarea><br />
+                      <input type="hidden" class="sourceLogging" id="hiddenKey01" name="formSrc1" data-name="formSrc1" value="modal">
+	                    <input type="hidden" class="sourceLogging" id="hiddenKey02" name="formUrl1" data-name="formUrl1" value="">
+	                    <input type="hidden" class="sourceLogging" id="hiddenKey03" name="formRef1" data-name="formRef1" value="">
                       <input type="submit" value="Send"><input type="reset" value="Clear">
                       </form>
-              
+                    -->
+
+
               </div>
               <br />
               <div style="text-align: center"></div>
@@ -318,8 +331,22 @@ Team
         </div>
       </div>
 
+      <div class="section-dark profile" id="profile">
+        <a class="anchor" id="googleform"></a>
+        <div class="container">          
+          <div class="columns is-centered">
+              <div
+                class="column is-12 has-text-centered aos-init"
+                data-aos="fade-right"
+              >
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfkQG58o4ZGeYJg3CT0Zj07ptKSZdCETjQ_T6HhHl3r2brz3A/viewform?embedded=true" width=100% height=100% frameborder="0" marginheight="0" marginwidth="0">Ladataan…</iframe>
 
-
+                <br />
+                <div style="text-align: center"></div>
+              </div>
+            </div>
+        </div>
+      </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -578,5 +605,12 @@ Team
       createGitgraph();
       window.onresize = checkForResize;
     </script>
+
+    <script> 
+	  {
+	  	document.getElementById('hiddenKey02').value = location.pathname;
+	  	document.getElementById('hiddenKey03').value = document.referrer;
+  	}
+	  </script>
   </body>
 </html>
