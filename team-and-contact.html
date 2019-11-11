@@ -249,9 +249,14 @@ Team
           </div>
           <div class="columns is-centered">
             <div
-              class="column is-4 has-text-centered aos-init"
+              class="column is-12 has-text-centered aos-init"
               data-aos="fade-left"
             >
+            <div class="videoWrapper">
+           
+                  
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfkQG58o4ZGeYJg3CT0Zj07ptKSZdCETjQ_T6HhHl3r2brz3A/viewform?embedded=true" width="1640" height="1640" frameborder="0" marginheight="0" marginwidth="0">Ladataan</iframe>
+              </div>
             <!--
             <div id="after_submit"></div>
 
@@ -322,29 +327,34 @@ Team
                       </form>
                     -->
 
+                    
+                   <!--
+
+                    <form name="submit-to-google-sheet">
+                        <input name="email" type="email" placeholder="Email" required>
+                        <button type="submit">Send</button>
+                      </form>
+                      <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+                      <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+                      <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+                      <script>
+                        const scriptURL = ' https://script.google.com/macros/s/AKfycbxKj6kpHkIROFoREZ-Ehm06P2os1MKDAsbxPS3z1toIaPZhzPUg/exec'
+                        const form = document.forms['submit-to-google-sheet']
+                      
+                        form.addEventListener('submit', e => {
+                          e.preventDefault()
+                          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                            .then(response => console.log('Success!', response))
+                            .catch(error => console.error('Error!', error.message))
+                        })
+                      </script>
+                      -->
 
               </div>
               <br />
               <div style="text-align: center"></div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="section-dark profile" id="profile">
-        <a class="anchor" id="googleform"></a>
-        <div class="container">          
-          <div class="columns is-centered">
-              <div
-                class="column is-12 has-text-centered aos-init"
-                data-aos="fade-right"
-              >
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfkQG58o4ZGeYJg3CT0Zj07ptKSZdCETjQ_T6HhHl3r2brz3A/viewform?embedded=true" width=100% height=100% frameborder="0" marginheight="0" marginwidth="0">Ladataan…</iframe>
-
-                <br />
-                <div style="text-align: center"></div>
-              </div>
-            </div>
         </div>
       </div>
 
