@@ -1,7 +1,3 @@
-# OpenSUTD People Page
-This repository houses the prototype of [OpenSUTD](https://opensutd.org/)'s about page.
+# Template
 
-## TODO
-- Make **all** git graphs responsive.
-- Make clickable commit dots different visually.
-- Add more content.
+The design of this page is inspired by openSUTD.org
