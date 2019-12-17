@@ -19,10 +19,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
     />
-    <meta name="description" content="Home of OpenSUTD" />
-    <meta content="Home of OpenSUTD" />
-    <meta content="OpenSUTD" property="og:title" />
-    <meta content="Home of OpenSUTD" property="twitter:title" />
+    <meta name="description" content="beffectiv.tech" />
+    <meta content="beffectiv.tech" />
+    <meta content="beffectiv.tech" property="og:title" />
+    <meta content="beffectiv.tech" property="twitter:title" />
 
     <link rel="shortcut icon" href="images/beffectiv.ico" />
     <title>beffectiv.tech</title>
@@ -336,150 +336,6 @@
 
       if (width <= 660) {
         mode = "compact";
-      }
-
-      async function createGitgraph() {
-        try {
-          var graphContainer = document.getElementById(gitgraphID);
-          var customTemplate = GitgraphJS.templateExtend(
-            GitgraphJS.TemplateName.Metro,
-            {
-              colors: [
-                "#000000",
-                "#CF0000",
-                "#6963FF",
-                "#47E8D4",
-                "#6BDB52",
-                "#E84BA5",
-                "#FFA657"
-              ],
-              commit: {
-                message: {
-                  displayAuthor: false,
-                  displayHash: false
-                }
-              }
-            }
-          );
-          var gitgraph = GitgraphJS.createGitgraph(graphContainer, {
-            template: customTemplate,
-            mode: mode,
-            orientation: "vertical-reverse"
-          });
-          var OpenSUTD = gitgraph.branch("Resources");
-          OpenSUTD.commit({
-            subject: "Joel's prototype",
-            onClick(commit) {
-              window.open("https://github.com/OpenSUTD/course-materials");
-            },
-            onMouseOver(commit) {
-              document.body.style.cursor = "pointer";
-            },
-            onMouseOut(commit) {
-              document.body.style.cursor = "default";
-            }
-          });
-
-          OpenSUTD.commit({
-            subject: "Academic notes",
-            onClick(commit) {
-              window.open("https://github.com/OpenSUTD/course-notes");
-            },
-            onMouseOver(commit) {
-              document.body.style.cursor = "pointer";
-            },
-            onMouseOut(commit) {
-              document.body.style.cursor = "default";
-            }
-          });
-          OpenSUTD.commit({
-            subject: "Open SAC Policies",
-            onClick(commit) {
-              window.open("https://github.com/OpenSUTD/SAC-student-rules");
-            },
-            onMouseOver(commit) {
-              document.body.style.cursor = "pointer";
-            },
-            onMouseOut(commit) {
-              document.body.style.cursor = "default";
-            }
-          });
-          OpenSUTD.commit({
-            subject: "Fifth Row guides",
-            onClick(commit) {
-              window.open("https://github.com/OpenSUTD/fifth-row-guides");
-            },
-            onMouseOver(commit) {
-              document.body.style.cursor = "pointer";
-            },
-            onMouseOut(commit) {
-              document.body.style.cursor = "default";
-            }
-          });
-          var Web_Artefacts = gitgraph.branch({
-            name: "Web Artefacts",
-            from: OpenSUTD
-          });
-          var Events = gitgraph.branch({
-            name: "Events",
-            from: OpenSUTD
-          });
-          OpenSUTD.commit({
-            subject: "Publish coding notes",
-            onClick(commit) {
-              window.open("https://github.com/OpenSUTD/coding-notes");
-            },
-            onMouseOver(commit) {
-              document.body.style.cursor = "pointer";
-            },
-            onMouseOut(commit) {
-              document.body.style.cursor = "default";
-            }
-          });
-          Events.commit({
-            subject: "DiscoverSUTD 2019",
-            onClick(commit) {
-              window.open("https://discover.sutd.dev/");
-            },
-            onMouseOver(commit) {
-              document.body.style.cursor = "pointer";
-            },
-            onMouseOut(commit) {
-              document.body.style.cursor = "default";
-            }
-          });
-          Events.commit({
-            subject: "SUTD Unfiltered 2019",
-            onClick(commit) {
-              window.open("https://unfiltered.opensutd.org/");
-            },
-            onMouseOver(commit) {
-              document.body.style.cursor = "pointer";
-            },
-            onMouseOut(commit) {
-              document.body.style.cursor = "default";
-            }
-          });
-          Web_Artefacts.commit("SUTD Calendar");
-          OpenSUTD.merge(Events);
-          Web_Artefacts.commit("People Page");
-          OpenSUTD.merge(Web_Artefacts);
-          graphContainer.style.transform =
-            "scale(0.85, 0.85) translate(20%, 0%)";
-        } catch (e) {
-          console.log(e);
-        }
-      }
-
-      async function deleteGitgraph() {
-        try {
-          oldGitgraph = document.getElementById(gitgraphID);
-          while (oldGitgraph.firstChild) {
-            oldGitgraph.removeChild(oldGitgraph.firstChild);
-          }
-        } catch (e) {
-          console.log(e);
-        }
       }
 
       async function checkForResize() {
